@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from "react-router-dom";
+import Intro from "./Pages/Intro";
+import NaviLayer from "./Components/Layouts/NaviLayer";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const language = "ua";
+    const fontTheme = language === "ua" ? "fixel" : "syne";
+    return (
+        <div className={fontTheme}>
+            <Routes>
+                <Route element={<NaviLayer />}>
+                    <Route index element={<Intro />} />
+                    <Route path={"page"} element={<h1>Page</h1>} />
+                </Route>
+            </Routes>
+        </div>
+    );
 }
 
 export default App;

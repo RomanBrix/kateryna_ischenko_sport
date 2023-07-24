@@ -1,0 +1,58 @@
+header {
+    position: sticky;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    background: transparent;
+    transition: 0.25s;
+    box-sizing: border-box;
+    padding: 19px 0;
+
+    &.scrolled-bg {
+        background: rgba(14, 14, 14, 0.9);
+    }
+    // background: red;
+    // margin-bottom: 20px;
+
+    .content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: $white-color;
+        .logo {
+            font-family: Syne;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 24px; /* 100% */
+            letter-spacing: -0.96px;
+            .bottom {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                svg {
+                    margin-right: 4px;
+                }
+            }
+        }
+        .menu {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 0 32px;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+            // margin-left: auto;
+            // margin-right: 50px;
+            li {
+                cursor: pointer;
+                transition: 0.25s;
+
+                &:hover {
+                    opacity: 0.76;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,56 @@
+.btns-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0 16px;
+}
+
+button {
+    cursor: pointer;
+    transition: 0.25s;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    border-radius: 20px;
+    user-select: none;
+    background: $accent-color-one;
+    color: $dark-grey-color;
+    border: 1px solid transparent;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    font-family: "FixelText";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+        margin-right: 5px;
+        margin-top: -2px;
+        transition: 0.25s;
+    }
+    // line-height: 21px;
+
+    &:hover {
+        background: rgba($color: $accent-color-one, $alpha: 0.75);
+    }
+
+    &.accent-one {
+        background: $accent-color-one;
+        color: $dark-grey-color;
+
+        &:hover {
+            // background: rgba($color: $accent-color-one, $alpha: 0.75);
+            background: darken($color: $accent-color-one, $amount: 7);
+            // background: lighten($color: $accent-color-one, $amount: 7);
+        }
+    }
+    &.accent-two {
+        background: $accent-color-two;
+        color: $white-color;
+
+        &:hover {
+            // background: rgba($color: $accent-color-two, $alpha: 0.75);
+            background: darken($color: $accent-color-two, $amount: 7);
+        }
+    }
+}

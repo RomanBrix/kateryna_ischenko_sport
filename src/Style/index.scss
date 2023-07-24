@@ -1,0 +1,61 @@
+@import "./fonts/index.scss";
+
+$accent-color-one: #c3ff00;
+$accent-color-two: #4638ff;
+$dark-grey-color: #0e0e0e;
+$white-color: #ffffff;
+$red-color: #f44336;
+$yellow-color: #ffc107;
+$blue-color: #0091ea;
+
+html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    body {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: "FixelDisplay";
+        // font-family: "FixelText";
+        // font-family: "Syne";
+        #root {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            // & > div {
+            //     display: flex;
+            //     flex-direction: column;
+            // }
+            // background: $accent-color-two;
+            .content {
+                width: 1665px;
+                max-width: 100%;
+                margin: 0 auto;
+                box-sizing: border-box;
+                @media (max-width: 1681px) {
+                    padding: 0 15px;
+                }
+            }
+
+            .devide-header {
+                margin-top: -86px;
+            }
+
+            .syne {
+                font-family: "Syne";
+            }
+            .FixelDisplay {
+                font-family: "FixelDisplay";
+            }
+            .FixelText,
+            .fixel {
+                font-family: "FixelText";
+            }
+            @import "./buttons.scss";
+
+            @import "./Layouts/index.scss";
+            @import "./Intro/index.scss";
+        }
+    }
+}
