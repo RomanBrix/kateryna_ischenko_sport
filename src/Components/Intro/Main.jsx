@@ -1,10 +1,10 @@
 import { ReactComponent as HeartBeatSvg } from "./svg/heart_beat.svg";
+import { ReactComponent as StartSvg } from "./svg/star.svg";
 
 export default function Main() {
     return (
         <div className="main">
             <div
-                // background: ;
                 className="bg"
                 style={{
                     background: `linear-gradient(0deg, rgba(14, 14, 14, 0.85) 0%, rgba(14, 14, 14, 0.85) 100%), url('/src/intro_bg.png'), lightgray 50% / cover no-repeat`,
@@ -54,7 +54,21 @@ export default function Main() {
                     <img src="/src/katya.png" alt="" />
                     <HeartBeatSvg className="hear_svg" />
                 </div>
+                <div className="bottom">{getLine()}</div>
             </div>
         </div>
     );
+
+    function getLine(n = 5) {
+        const arr = [];
+        for (let i = 0; i < n; i++) {
+            arr.push(
+                <div className="line" key={i}>
+                    Придбай план тренування , чи харчування та отримуй бонус
+                    <StartSvg />
+                </div>
+            );
+        }
+        return arr;
+    }
 }

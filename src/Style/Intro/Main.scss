@@ -25,6 +25,9 @@
         justify-content: space-between;
         color: $white-color;
         height: 100%;
+        position: relative;
+
+        // flex-wrap: wrap;
         .left {
             align-self: center;
             width: 55%;
@@ -126,7 +129,7 @@
             }
             img {
                 position: absolute;
-                bottom: 0;
+                bottom: -2px;
                 left: 50%;
                 transform: translate(-50%, 0%);
                 height: calc(100% - 88px);
@@ -146,20 +149,68 @@
                 width: 100%;
 
                 path {
-                    stroke-dasharray: 2017;
+                    // stroke-dasharray: 2017;
+                    stroke-dasharray: 1000; /* длина пути */
+                    stroke-dashoffset: 2000;
                     animation: dash 4s linear infinite;
                 }
             }
             // display: none;
+        }
+        .bottom {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0 20px;
+            overflow-x: hidden;
+            margin-top: auto;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background: $accent-color-one;
+            color: $dark-grey-color;
+            box-sizing: border-box;
+            padding: 16px 0 10px;
+            .line {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 25px; /* 138.889% */
+                letter-spacing: 0.72px;
+                text-transform: uppercase;
+                text-wrap: nowrap;
+                margin-right: 24px;
+
+                svg {
+                    margin-top: -8px;
+                    margin-left: 5px;
+                }
+                &:first-child {
+                    animation: line 30s linear infinite alternate;
+                }
+            }
         }
     }
 }
 
 @keyframes dash {
     from {
-        stroke-dashoffset: 2017;
+        stroke-dashoffset: 2000;
     }
     to {
         stroke-dashoffset: 0;
+    }
+}
+
+@keyframes line {
+    from {
+        margin-left: 0;
+    }
+    to {
+        margin-left: -100%;
     }
 }
