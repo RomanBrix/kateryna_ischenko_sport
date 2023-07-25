@@ -54,7 +54,9 @@ export default function Main() {
                     <img src="/src/katya.png" alt="" />
                     <HeartBeatSvg className="hear_svg" />
                 </div>
-                <div className="bottom">{getLine()}</div>
+                <div className="bottom">
+                    <div className="go-line">{getLine()}</div>
+                </div>
             </div>
         </div>
     );

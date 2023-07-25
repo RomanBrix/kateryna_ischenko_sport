@@ -159,19 +159,47 @@
         }
         .bottom {
             width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 0 20px;
-            overflow-x: hidden;
+            // display: flex;
+            // align-items: center;
+            // justify-content: space-between;
+            // gap: 0 20px;
+            // overflow-x: hidden;
             margin-top: auto;
             position: absolute;
             bottom: 0;
             left: 0;
-            background: $accent-color-one;
-            color: $dark-grey-color;
-            box-sizing: border-box;
-            padding: 16px 0 10px;
+            // overflow-y: hidden;
+            // background: $accent-color-one;
+            // color: $dark-grey-color;
+            // box-sizing: border-box;
+            // padding: 16px 0 10px;
+            &::after {
+                content: "";
+                position: absolute;
+                left: -100%;
+                top: 0;
+                width: 1000%;
+                background: $accent-color-one;
+                // filter: blur(10px);
+                height: 100%;
+            }
+            .go-line {
+                background: $accent-color-one;
+                color: $dark-grey-color;
+                overflow-x: hidden;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 0 20px;
+                position: relative;
+                z-index: 1;
+                box-sizing: border-box;
+                padding: 16px 0 10px;
+                // border: solid rgba($color: $red-color, $alpha: 0.5);
+                border: solid rgba($color: $dark-grey-color, $alpha: 0.5);
+                border-width: 0 2px 0 2px;
+                // height: 100%;
+            }
             .line {
                 display: flex;
                 align-items: center;
