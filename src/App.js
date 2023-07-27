@@ -1,6 +1,9 @@
 import { Route, Routes } from "react-router-dom";
 import Intro from "./Pages/Intro";
 import NaviLayer from "./Components/Layouts/NaviLayer";
+import ContactPage from "./Pages/Contact";
+import TrainingPage from "./Pages/Training";
+import PartnersPage from "./Pages/Partners";
 
 function App() {
     const language = "ua";
@@ -10,7 +13,9 @@ function App() {
             <Routes>
                 <Route element={<NaviLayer />}>
                     <Route index element={<Intro />} />
-                    <Route path={"page"} element={<h1>Page</h1>} />
+                    <Route path={"training"} element={<TrainingPage />} />
+                    <Route path={"partners"} element={<PartnersPage />} />
+                    <Route path={"contact"} element={<ContactPage />} />
                 </Route>
             </Routes>
         </div>

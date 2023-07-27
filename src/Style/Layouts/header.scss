@@ -8,6 +8,13 @@ header {
     box-sizing: border-box;
     padding: 19px 0;
 
+    &.white-head {
+        &:not(.scrolled-bg) {
+            * {
+                color: $dark-grey-color;
+            }
+        }
+    }
     &.scrolled-bg {
         background: rgba(14, 14, 14, 0.9);
     }
@@ -20,6 +27,7 @@ header {
         justify-content: space-between;
         color: $white-color;
         .logo {
+            transition: 0.25s;
             font-family: Syne;
             font-size: 24px;
             font-style: normal;
@@ -30,6 +38,7 @@ header {
                 display: flex;
                 align-items: center;
                 justify-content: flex-start;
+                // transition: 0.25s;
                 svg {
                     margin-right: 4px;
                 }
@@ -51,6 +60,10 @@ header {
 
                 &:hover {
                     opacity: 0.76;
+                }
+
+                &.active {
+                    color: $accent-color-two;
                 }
             }
         }

@@ -5,6 +5,7 @@
     height: 100dvh;
     // height: 100dvmin;
     transition: 0.25s;
+    overflow: hidden;
     .bg {
         position: absolute;
         z-index: 0;
@@ -150,29 +151,18 @@
 
                 path {
                     // stroke-dasharray: 2017;
-                    stroke-dasharray: 1000; /* длина пути */
-                    stroke-dashoffset: 2000;
+                    stroke-dasharray: 2840; /* длина пути */
+                    stroke-dashoffset: 2840;
                     animation: dash 4s linear infinite;
                 }
             }
-            // display: none;
         }
         .bottom {
             width: 100%;
-            // display: flex;
-            // align-items: center;
-            // justify-content: space-between;
-            // gap: 0 20px;
-            // overflow-x: hidden;
             margin-top: auto;
             position: absolute;
             bottom: 0;
             left: 0;
-            // overflow-y: hidden;
-            // background: $accent-color-one;
-            // color: $dark-grey-color;
-            // box-sizing: border-box;
-            // padding: 16px 0 10px;
             &::after {
                 content: "";
                 position: absolute;
@@ -227,7 +217,7 @@
 
 @keyframes dash {
     from {
-        stroke-dashoffset: 2000;
+        stroke-dashoffset: 2840;
     }
     to {
         stroke-dashoffset: 0;

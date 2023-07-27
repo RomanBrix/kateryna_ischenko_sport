@@ -17,6 +17,32 @@ html {
         margin: 0;
         box-sizing: border-box;
         font-family: "FixelDisplay";
+
+        &::-webkit-scrollbar {
+            width: 7px;
+            background: $dark-grey-color;
+            // transition: 0.25s;
+
+            // &:hover {
+            //     width: 10px;
+            // }
+            // height: 0;
+        }
+        &::-webkit-scrollbar-track {
+            background: $dark-grey-color;
+            width: 0;
+            // transition: 0.25s;
+            height: 0;
+            cursor: pointer;
+        }
+        &::-webkit-scrollbar-thumb {
+            background: $accent-color-one;
+            // transition: 0.25s;
+        }
+        // &::-webkit-scrollbar-thumb:hover {
+        //     background: $accent-color-two;
+        //     // transition: 0.25s;
+        // }
         // font-family: "FixelText";
         // font-family: "Syne";
         #root {
@@ -41,6 +67,10 @@ html {
             .devide-header {
                 margin-top: -86px;
             }
+            .page {
+                box-sizing: border-box;
+                padding-top: 86px;
+            }
 
             .syne {
                 font-family: "Syne";
@@ -56,6 +86,7 @@ html {
 
             @import "./Layouts/index.scss";
             @import "./Intro/index.scss";
+            @import "./Contacts/index.scss";
         }
     }
 }
