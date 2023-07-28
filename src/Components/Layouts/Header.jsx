@@ -43,7 +43,12 @@ export default function Header() {
     return (
         <header ref={headerRef}>
             <div className="content">
-                <div className="logo">
+                <div
+                    className="logo"
+                    onClick={() => {
+                        navigate("/");
+                    }}
+                >
                     <div className="top">Kateryna</div>
                     <div className="bottom">
                         <LogoSvg />

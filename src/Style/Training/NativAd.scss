@@ -1,0 +1,88 @@
+.native-ad {
+    position: relative;
+    background: $dark-grey-color;
+
+    box-sizing: border-box;
+    padding: 46px 0 80px;
+    margin-top: 87px;
+    // &::after {
+    //     content: "";
+    //     position: absolute;
+    //     left: -100%;
+    //     top: 0;
+    //     width: 1000%;
+    //     background: $dark-grey-color;
+    //     // filter: blur(10px);
+    //     height: 100%;
+    // }
+    .content {
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+        color: $white-color;
+        .arrow-img {
+            z-index: 1;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            svg {
+                width: 162px;
+                height: auto;
+            }
+        }
+        .left {
+            z-index: 1;
+            width: 50%;
+            box-sizing: border-box;
+            padding-top: 56px;
+            // margin-top: 56px;
+
+            h1 {
+                max-width: 717px;
+                font-size: 36px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 120%; /* 43.2px */
+                letter-spacing: 0.72px;
+                text-transform: uppercase;
+                .accent-one {
+                    color: $accent-color-one;
+                }
+            }
+            .info-text {
+                // max-width: 650px;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                span {
+                    width: 410px;
+                }
+                svg {
+                    width: 24px;
+                    height: 24px;
+                    &:first-child {
+                        align-self: flex-start;
+                        margin-right: 8px;
+                    }
+                    &:last-child {
+                        align-self: flex-end;
+                        transform: rotate(180deg);
+                        margin-left: 8px;
+                    }
+                }
+            }
+            button {
+                margin-top: 32px;
+            }
+        }
+        .right {
+            z-index: 1;
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0;
+        }
+    }
+}

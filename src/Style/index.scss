@@ -82,11 +82,14 @@ html {
             .fixel {
                 font-family: "FixelText";
             }
+
             @import "./buttons.scss";
+            @import "./page-style.scss";
 
             @import "./Layouts/index.scss";
             @import "./Intro/index.scss";
             @import "./Contacts/index.scss";
+            @import "./Training/index.scss";
         }
     }
 }

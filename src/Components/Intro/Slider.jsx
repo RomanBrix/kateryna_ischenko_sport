@@ -23,14 +23,22 @@ export default function Slider() {
             img: "/src/slider/eaa4f0e5fee7f6f590998350176f1582.png",
             title: "Переможниця Арнольд Класік 2022",
         },
-        // {
-        //     img: "/src/slider/eaa4f0e5fee7f6f590998350176f1582.png",
-        //     title: "Test test",
-        // },
-        // {
-        //     img: "/src/slider/eaa4f0e5fee7f6f590998350176f1582.png",
-        //     title: "Test test",
-        // },
+        {
+            img: "/src/slider/eaa4f0e5fee7f6f590998350176f1582.png",
+            title: "Test test",
+        },
+        {
+            img: "/src/slider/eaa4f0e5fee7f6f590998350176f1582.png",
+            title: "Test test",
+        },
+        {
+            img: "/src/slider/eaa4f0e5fee7f6f590998350176f1582.png",
+            title: "Test test",
+        },
+        {
+            img: "/src/slider/eaa4f0e5fee7f6f590998350176f1582.png",
+            title: "Test test",
+        },
     ];
 
     const scrollElem = useRef(null);
