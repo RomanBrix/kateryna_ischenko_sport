@@ -4,6 +4,9 @@ import NaviLayer from "./Components/Layouts/NaviLayer";
 import ContactPage from "./Pages/Contact";
 import TrainingPage from "./Pages/Training";
 import PartnersPage from "./Pages/Partners";
+import Nutrition from "./Pages/Nutrition";
+import CalcProducts from "./Pages/CalcProducts";
+import FoodDelivery from "./Pages/FoodDelivery";
 
 function App() {
     const language = "ua";
@@ -15,6 +18,9 @@ function App() {
                     <Route index element={<Intro />} />
                     <Route path={"training"} element={<TrainingPage />} />
                     <Route path={"partners"} element={<PartnersPage />} />
+                    <Route path={"nutrition"} element={<Nutrition />} />
+                    <Route path={"calc-products"} element={<CalcProducts />} />
+                    <Route path={"food-delivery"} element={<FoodDelivery />} />
                     <Route path={"contact"} element={<ContactPage />} />
                 </Route>
             </Routes>

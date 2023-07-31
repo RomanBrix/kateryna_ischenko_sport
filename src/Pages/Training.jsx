@@ -1,4 +1,5 @@
 import Categories from "../Components/Training/Categories";
+import Examples from "../Components/Training/Examples";
 import NativeAd from "../Components/Training/NativeAd";
 import Posing from "../Components/Training/Posing";
 
@@ -14,6 +15,7 @@ export default function TrainingPage() {
             </div>
             <NativeAd />
             <Posing />
+            <Examples />
         </div>
     );
 }

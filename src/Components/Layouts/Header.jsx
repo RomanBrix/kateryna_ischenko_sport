@@ -11,6 +11,8 @@ export default function Header() {
 
     useEffect(() => {
         checkActiveClass();
+
+        // eslint-disable-next-line
     }, [pathname]);
     useEffect(() => {
         const handleScroll = () => {
@@ -28,6 +30,7 @@ export default function Header() {
         return () => {
             window.removeEventListener("scroll", handleScroll);
         };
+        // eslint-disable-next-line
     }, []);
 
     useEffect(() => {
@@ -38,6 +41,7 @@ export default function Header() {
         } else if (!scrolled && header.classList.contains("scrolled-bg")) {
             header.classList.remove("scrolled-bg");
         }
+        // eslint-disable-next-line
     }, [scrolled]);
 
     return (
@@ -60,16 +64,16 @@ export default function Header() {
                     <li onClick={changeLocation} data-link="/">
                         Головна
                     </li>
-                    <li onClick={changeLocation} data-link="/">
+                    <li onClick={changeLocation} data-link="/nutrition">
                         Харчування
                     </li>
                     <li onClick={changeLocation} data-link="/training">
                         Тренування
                     </li>
-                    <li onClick={changeLocation} data-link="/">
+                    <li onClick={changeLocation} data-link="/calc-products">
                         Розрахунок продуктів
                     </li>
-                    <li onClick={changeLocation} data-link="/">
+                    <li onClick={changeLocation} data-link="/food-delivery">
                         Замовити харчування
                     </li>
                     <li onClick={changeLocation} data-link="/partners">

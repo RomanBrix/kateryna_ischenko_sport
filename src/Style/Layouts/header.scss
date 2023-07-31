@@ -58,6 +58,8 @@ header {
             // margin-right: 50px;
             li {
                 cursor: pointer;
+                font-weight: 500;
+                user-select: none;
                 transition: 0.25s;
 
                 &:hover {
