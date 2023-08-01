@@ -80,9 +80,9 @@ export default function Slider() {
     );
 
     function renderSliderBlocks(blocks) {
-        return blocks.map((item) => {
+        return blocks.map((item, index) => {
             return (
-                <div className="slider-block" key={item.img}>
+                <div className="slider-block" key={item.img + index}>
                     <div className="photo">
                         <img src={item.img} alt="img" />
                     </div>
